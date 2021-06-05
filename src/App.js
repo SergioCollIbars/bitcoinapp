@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import logo from './images/interrogante.png'
 import Menu from "./components/Menu";
 import CoinList from './components/CoinList';
+import CoinPage from './components/CoinPage';
 /*-----------------------------------------------*/
 
 
@@ -26,6 +27,7 @@ function App() {
         <Menu />
       </div>
       <Switch>
+        <Route path="/coin/:id" component={CoinPage} />
         <Route path="/" component={CoinList} />
       </Switch>
     </Router>

@@ -1,0 +1,30 @@
+.coin-page{
+    display: flex;
+    flex-direction: column;
+}
+
+#Back{
+border:solid;
+display: flex;
+flex-direction: row;
+}
+#Back a{
+  margin-left: 90%;  
+}
+
+.HeaderCoin{
+    border:solid;
+    display: flex;
+    flex-direction: row;
+}
+.HeaderCoin h1{
+    margin-left: 1.5rem;
+}
+.Info{
+    display:flex;
+    flex-direction: row;
+}
+.Info img{
+    border: solid;
+    height: 30rem;
+}
