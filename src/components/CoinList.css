@@ -1,0 +1,25 @@
+.coin{
+    border: solid;
+    margin: 1.2rem;
+    display: flex;
+    flex-direction: row;
+}
+.coin img{
+    margin: 2rem
+}
+.info{
+    display: flex;
+    flex-direction: row;
+}
+.info h3{
+    margin-right: 1.5rem;
+}
+.info h4{
+    margin-left: 1.5rem;
+}
+#Red{
+    color: red;
+}
+#Green{
+    color: green
+}
