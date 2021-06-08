@@ -22,39 +22,28 @@ const Coin = (props) => {
 };
 
 function CoinList() {
+
     const [coinList, setCoinList] = useState(null);
-    const [search, setSearch] = useState("black");
 
     const loadCoin = async () => {
-        let search_params = (search ? `?coin_name=${search}` : "");
-        const response = await fetch(`https://static.coinpaper.io/api/coins.json`);
+        const response = await fetch(
+            `https://static.coinpaper.io/api/coins.json`
+        );
         const json = await response.json();
         setCoinList(json);
     };
 
 
-    const submit = (event) => {
-        event.preventDefault(); // prevent page reloading
-    };
-
-
-    const onChange = (event) => {
-        setSearch(event.target.value);
-    };
 
     useEffect(() => {
         loadCoin();
-    }, [search]);
+    }, []);
 
     if (coinList === null) {
         return <div id="Load">Loading...</div>;
     }
     return (
         <div>
-            <form onSubmit={submit}>
-                <input type="text" value={search} onChange={onChange} />
-                <button>Search</button>
-            </form>
             <div className="Coinlist">
                 {(coinList.slice(0, 10)).map((b) => ( /*  Muestra los primeros 10 elementos */
                     <Coin key={b.id} coin={b} />

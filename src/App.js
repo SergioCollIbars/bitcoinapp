@@ -3,7 +3,8 @@
 --------------------------------------------------*/
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import logo from './images/interrogante.png'
+import logo from './images/Logo_img.png'
+import title from './images/Logo_title.png'
 import Menu from "./components/Menu";
 import CoinList from './components/CoinList';
 import CoinPage from './components/CoinPage';
@@ -14,14 +15,8 @@ function App() {
   return (
     <Router>
       <div className="Header">
-        <h1>CRYPTO TRACK</h1>
-        <img src={logo} />
-      </div>
-      <div className="SearchBar">
-        <form>
-          <input type="text" />
-          <button>Search</button>
-        </form>
+        <img id='Titulo' src={title} />
+        <img id='Logo' src={logo} />
       </div>
       <div className="Menu">
         <Menu />

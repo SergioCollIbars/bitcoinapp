@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom';
 import './CoinPage.css';
+import Plot from './Line';
+
+
 
 function CoinPage() {
     const { id } = useParams();
@@ -21,6 +24,7 @@ function CoinPage() {
     if (coinList === null) {
         return <div>Loading...</div>;
     }
+
     return (
         <div className="coin-page">
             <div id="Back">
@@ -35,6 +39,9 @@ function CoinPage() {
             <div className="Info">
                 <img src={coinList.image.original} />
                 <p>{coinList.description.introduction}</p>
+            </div>
+            <div>
+                <Plot />
             </div>
         </div> /* Añadir más cosas!*/
     )

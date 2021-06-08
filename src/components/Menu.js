@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
+import { Link } from 'react-router-dom';
 import MenuItem from '@material-ui/core/MenuItem';
 
 
+
 export default function SimpleMenu() {
+
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -14,6 +17,7 @@ export default function SimpleMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
 
   return (
     <div>
@@ -26,10 +30,18 @@ export default function SimpleMenu() {
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
+        PaperProps={{
+          style: {
+            width: 350, /* Menu width */
+            height: 2000, /* Menu height */
+          },
+        }}
+
       >
-        <MenuItem onClick={handleClose}>Home</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Bitcoin</MenuItem>
+        <Link to='/coin/btc-bitcoin' style={{ textDecoration: 'none' }}>
+          <MenuItem>Bitcoin</MenuItem>
+        </Link>
+        <MenuItem onClick={handleClose}>Notifications</MenuItem>
         <MenuItem onClick={handleClose}>Ethereum</MenuItem>
         <MenuItem onClick={handleClose}>Wallet</MenuItem>
         <MenuItem onClick={handleClose}>Bitcoin1</MenuItem>
