@@ -41,7 +41,7 @@ function CoinPage() {
                 <p>{coinList.description.introduction}</p>
             </div>
             <div>
-                <Plot />
+                <Plot data={coinList.market.ticker_price_24h} />
             </div>
         </div> /* Añadir más cosas!*/
     )
