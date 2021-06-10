@@ -27,13 +27,16 @@ export default function SimpleMenu() {
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
+        getContentAnchorEl={null}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        transformOrigin={{ vertical: "top", horizontal: "center" }}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
         PaperProps={{
           style: {
             width: 350, /* Menu width */
-            height: 2000, /* Menu height */
+            height: 300, /* Menu height */
           },
         }}
 
@@ -41,13 +44,27 @@ export default function SimpleMenu() {
         <Link to='/coin/btc-bitcoin' style={{ textDecoration: 'none' }}>
           <MenuItem>Bitcoin</MenuItem>
         </Link>
-        <MenuItem onClick={handleClose}>Notifications</MenuItem>
-        <MenuItem onClick={handleClose}>Ethereum</MenuItem>
-        <MenuItem onClick={handleClose}>Wallet</MenuItem>
-        <MenuItem onClick={handleClose}>Bitcoin1</MenuItem>
-        <MenuItem onClick={handleClose}>Bitcoin2</MenuItem>
-        <MenuItem onClick={handleClose}>Bitcoin3</MenuItem>
-        <MenuItem onClick={handleClose}>Bitcoin4</MenuItem>
+        <Link to='/coin/eth-ethereum' style={{ textDecoration: 'none' }}>
+          <MenuItem>Ethereum</MenuItem>
+        </Link>
+        <Link to='/coin/usdt-tether' style={{ textDecoration: 'none' }}>
+          <MenuItem>Tether</MenuItem>
+        </Link>
+        <Link to='/coin/bnb-binance-coin' style={{ textDecoration: 'none' }}>
+          <MenuItem>Binance Coin</MenuItem>
+        </Link>
+        <Link to='/coin/ada-cardano' style={{ textDecoration: 'none' }}>
+          <MenuItem>Cardano</MenuItem>
+        </Link>
+        <Link to='/coin/dot-polkadot' style={{ textDecoration: 'none' }}>
+          <MenuItem>Polkadot</MenuItem>
+        </Link>
+        <Link to='/coin/xrp-xrp' style={{ textDecoration: 'none' }}>
+          <MenuItem>Ripple</MenuItem>
+        </Link>
+        <Link to='/statistics' style={{ textDecoration: 'none' }}>
+          <MenuItem>Statistics</MenuItem>
+        </Link>
       </Menu>
     </div>
   );

@@ -1,0 +1,22 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+.Coin{
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.content img{
+    height: 50px;
+    width: 50px;
+    margin-left: 4rem;
+}
+.Coin h1{
+font-size: 50px;
+}
+.info{
+    margin-left: 4rem;
+}

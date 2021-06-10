@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./CoinList.css";
+import Loading from './images/Loading.png';
 
 const Coin = (props) => {
     let iD = "Red"
@@ -40,7 +41,7 @@ function CoinList() {
     }, []);
 
     if (coinList === null) {
-        return <div id="Load">Loading...</div>;
+        return <div className="Loading"> <img src={Loading} /></div>;
     }
     return (
         <div>
