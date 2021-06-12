@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Loading from './images/Loading.png';
+import Loading from './images/Loading.gif';
 import Plot from './Line';
 
 function Statistic() {
@@ -13,7 +13,6 @@ function Statistic() {
         const json = await response.json();
         setCoinList(json);
     };
-
 
 
     useEffect(() => {

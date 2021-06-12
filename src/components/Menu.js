@@ -41,6 +41,9 @@ export default function SimpleMenu() {
         }}
 
       >
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <MenuItem>Home</MenuItem>
+        </Link>
         <Link to='/coin/btc-bitcoin' style={{ textDecoration: 'none' }}>
           <MenuItem>Bitcoin</MenuItem>
         </Link>
